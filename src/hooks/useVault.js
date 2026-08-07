@@ -33,7 +33,7 @@ export function useVault() {
   const toastTimerRef = useRef(null);
 
   // ── Toast ──
-  const showToast = useCallback((msg, duration = 2200) => {
+  const showToast = useCallback((msg, duration = 1500) => {
     clearTimeout(toastTimerRef.current);
     setToast({ msg, visible: true });
     toastTimerRef.current = setTimeout(
